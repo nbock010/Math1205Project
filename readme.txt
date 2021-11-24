@@ -9,7 +9,9 @@ This project is a rough simulation of how an 80/20 principle generally forms.  I
 
 -----------------------------------
 HOW TO RUN
-  The main user interface is in client.java. It runs the primary method in DemoScript.java which (hopefully) describes how a simulation runs. It should be able to run in any JDE using Java 11 (I think).
+  The main user interface is in client.java. It runs the primary method in DemoScript.java which (hopefully) describes how a simulation runs. It should be able to run in any JDE using Java 11 (I think). 
+  
+  It runs using System.in as an input scanner, such that the user may define the number of cells and sugars to apply to a simulation.
 
 -----------------------------------
 REFERENCES/FURTHER READINGS
