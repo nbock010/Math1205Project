@@ -26,6 +26,7 @@ public class DemoScript {
 
       dish.printDataBySize();
       // make calculations
+      predictions();
 
       System.out.println("Run again?");
       if (!askYesOrNo()) {
@@ -41,15 +42,41 @@ public class DemoScript {
     System.out.println("Bye!");
 
     PetriDish dish = new PetriDish(askNextInt());
-    // number of cells: ----------------^^-----
-
-    // re run?: (y: same values? y/n)(n: bye!)
 
     scan.close();
   } // end run
 
+  /**
+   * By The end, this will tally how many sugars were eaten and the sum of lengths, each divided by
+   * the top 20% of cells.
+   *
+   * <p>Note: Because of java's dividing algorithm, cellCounts below 5 will return 0 cells.
+   */
   private void predictions() {
+    System.out.println("*------------------------------------*");
+    int countTopTwenty = dish.cellCount() / 5;
+    // How many cells are in the top 20%
+    int topTwentySugars = 0;
+    int topTwentyLength = 0;
 
+    // Adds the values of the top 20% of cells' sugars and lengths
+    for (int i = 0; i < countTopTwenty; i++) {
+      topTwentySugars += dish.sortedList().get(i).getSugarsEaten();
+      // adds the sugars eaten
+      topTwentyLength += dish.sortedList().get(i).getSize();
+      // adds the lengths
+    }
+
+    System.out.println("Number of cells in top 20%: ");
+    System.out.println("  " + countTopTwenty);
+
+    System.out.println("Number of sugars in the first " + countTopTwenty + " cells: ");
+    System.out.println("  " + topTwentySugars);
+
+    System.out.println("Length of the first " + countTopTwenty + " cells: ");
+    System.out.println("  " + topTwentyLength);
+
+    System.out.println("*------------------------------------*");
     // cells / 20
   }
 

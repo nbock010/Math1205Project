@@ -89,8 +89,8 @@ public class PetriDish {
     System.out.println();
     ;
     for (Cell c : tempCells) {
-      System.out.println("Cell " + tempCells.indexOf(c) + 1 + " : ");
-      // reading indexes 1 to n rather than 0 to (n-1) for readability.
+      System.out.println("Cell " + tempCells.indexOf(c) + ": ");
+
       System.out.println("  Size: " + c.getSize() + "um");
       System.out.println("  Sugars eaten: " + c.getSugarsEaten());
       // System.out.println();

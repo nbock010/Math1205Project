@@ -1,6 +1,10 @@
-
 import biology.PetriDish;
 
+/**
+ * A quick rough introduction and explanation for how the simulation runs.
+ *
+ * @author noahb
+ */
 public class Introduction {
 
   public static void main(String[] args) {
@@ -9,14 +13,15 @@ public class Introduction {
     // # of cells in the dish -----^
 
     dish.printDataBySize();
-    // prints data of the cells, sorted by largest to smallest
+    // let's see the data of the cells, sorted by largest to smallest
 
     System.out.println(dish.getTotalLength());
     // collective length of all the cells
 
     for (int i = 0; i < 10; i++) {
-      // # of sugars ---^^
+      // # of sugars ---^^---
       dish.feedAndShift();
+      // feeds the cells, and shifts them so they don't overlap
     }
     System.out.println("---------------AFTER FEEDING--------------------");
     dish.printDataBySize();
