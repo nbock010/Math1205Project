@@ -9,7 +9,7 @@ This project is a rough simulation of how an 80/20 principle generally forms.  I
 
 -----------------------------------
 DEMONSTRATION
-  (tbd)
+  https://www.youtube.com/watch?v=7U4tvx7we8o
 
 -----------------------------------
 HOW TO RUN
@@ -20,7 +20,7 @@ HOW TO RUN
 -----------------------------------
 REFERENCES/FURTHER READINGS
 
-The ì80/20 Ruleî and Core Journals 
+The ‚Äú80/20 Rule‚Äù and Core Journals 
   Thomas E. Nisonger
   https://www.tandfonline.com/doi/full/10.1080/03615260801970774
   
