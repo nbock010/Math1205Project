@@ -29,20 +29,21 @@ public class DemoScript {
       predictions();
 
       System.out.println("Run again?");
-      if (!askYesOrNo()) {
+      if (!askYesOrNo()) { // ends simulation
+        scan.close();
         done = true;
-      } else {
+      } else { // new simulation
         System.out.println("Use new values? (Reset cell and sugar counts)");
         if (askYesOrNo()) {
           setCellCount();
           setSugarCount();
+        } else {
+          dish = new PetriDish(dish.cellCount()); // resets
         }
+        // else, repeat same cells and sugars
       }
     } // end !while
     System.out.println("Bye!");
-
-    PetriDish dish = new PetriDish(askNextInt());
-
     scan.close();
   } // end run
 
@@ -53,6 +54,7 @@ public class DemoScript {
    * <p>Note: Because of java's dividing algorithm, cellCounts below 5 will return 0 cells.
    */
   private void predictions() {
+    System.out.println();
     System.out.println("*------------------------------------*");
     int countTopTwenty = dish.cellCount() / 5;
     // How many cells are in the top 20%
@@ -71,10 +73,10 @@ public class DemoScript {
     System.out.println("  " + countTopTwenty);
 
     System.out.println("Number of sugars in the first " + countTopTwenty + " cells: ");
-    System.out.println("  " + topTwentySugars);
+    System.out.println("  " + topTwentySugars + "( out of " + sugars + ")");
 
     System.out.println("Length of the first " + countTopTwenty + " cells: ");
-    System.out.println("  " + topTwentyLength);
+    System.out.println("  " + topTwentyLength + "( out of " + dish.getTotalLength() + " um)");
 
     System.out.println("*------------------------------------*");
     // cells / 20

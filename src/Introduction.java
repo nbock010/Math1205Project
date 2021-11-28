@@ -14,8 +14,9 @@ public class Introduction {
 
     dish.printDataBySize();
     // let's see the data of the cells, sorted by largest to smallest
+    // it prints the cell's size and how many sugars it has eaten
 
-    System.out.println(dish.getTotalLength());
+    System.out.println("Petri dish length: " + dish.getTotalLength());
     // collective length of all the cells
 
     for (int i = 0; i < 10; i++) {
@@ -26,5 +27,7 @@ public class Introduction {
     System.out.println("---------------AFTER FEEDING--------------------");
     dish.printDataBySize();
     // prints data of the cells, sorted by largest to smallest
+    System.out.println("Petri dish length: " + dish.getTotalLength());
+    // collective length of all the cells
   }
 }
